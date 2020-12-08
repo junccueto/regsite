@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Enter Info{% endblock %}
+
+{% block content %}
+<h2>Inside - User Info</h2>
+
+<p>Step 1 - Name: {{info.name}}</p>
+<p>Step 2 - Age: {{info.age}}</p>
+<p>Step 3 - City: {{info.address}}</p>
+
+<a href='/step1/'>Go to Step 1</a>
+<a href='/step2/'>Go to Step 2</a>
+<a href='/step2/'>Go to Step 3</a>
+<a href='/logout/'>Logout</a>
+{% endblock %}

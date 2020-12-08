@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Enter Info{% endblock %}
+
+{% block content %}
+<h2>Step 1</h2>
+{% if error %}
+<p>{{error}}</p>
+{% endif %}
+<form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+<a href='/step2/'>Go to Step 2</a>
+<a href='/step3/'>Go to Step 3</a>
+<a href='/logout/'>Logout</a>
+{% endblock %}
